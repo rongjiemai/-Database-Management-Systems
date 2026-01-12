@@ -1,0 +1,9 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Refer to the address, store, staff, and customer tables of the Sakila database. \
+In this lab, these tables initially have the same columns as in Sakila. Implement a new strong entity phone, as shown in the following diagram: The diagram has four entities and three relationships. The entities are phone, store, staff, and customer. Phone has attributes phone_id R U, country_code R, phone_number R, and phone_type. Store, staff, and customer have no attributes. The relationships are store-has-phone, staff-has-phone, and customer-has-phone. All relationships have cardinality one-one maximum and zero-zero minimum. The diagram uses Sakila naming conventions. Follow the Sakila conventions for your table and column names: All lower case Underscore separator between root and suffix Foreign keys have the same name as referenced primary key Implement the diagram in three steps: Step 1. Remove the phone column from address. This column is replaced by the new strong entity. Step 2. Implement the strong entity as a new phone table. Specify data types VARCHAR(12) for phone_type and INTEGER UNSIGNED for other columns. Specify a suitable primary key and NOT NULL constraints according to the diagram. Step 3. Implement the has relationships as foreign keys in customer, staff, and store. Specify UNIQUE constraints according to the diagram. Specify SET NULL for delete rules and CASCADE for update rules, as follows: ALTER TABLE customer ADD FOREIGN KEY (phone_id) REFERENCES phone(phone_id) ON DELETE SET NULL ON UPDATE CASCADE;}
